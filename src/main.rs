@@ -92,8 +92,8 @@ fn main() {
     let errors = read_errors();
 
     for i in 0..cmp::min(opt.lines as usize, errors.len()) {
-        print_line("┄");
-        print!("{}", errors[i]);
+        print_line(&format!("{}", style("┄").dim().bold()));
+        println!("\n{}", errors[i]);
     }
 
     print!("\n");
