@@ -1,0 +1,256 @@
+        Checking edgelet-test-utils v0.1.0 (/home/avranju/code/iotedge-upstream/edgelet/edgelet-test-utils)
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:188:23
+    |
+188 |         let err: () = module.as_ref().err().cloned();
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected (), found enum `std::option::Option`
+    |
+    = note: expected type `()`
+               found type `std::option::Option<E>`
+
+error[E0061]: this function takes 1 parameter but 0 parameters were supplied
+   --> edgelet-test-utils/src/module.rs:190:23
+    |
+23  |     pub fn new(err: Option<E>) -> Self {
+    |     ---------------------------------- defined here
+...
+190 |             registry: TestRegistry::new(),
+    |                       ^^^^^^^^^^^^^^^^^^^ expected 1 parameter
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:281:13
+    |
+280 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+281 |             Ok(_) => future::ok(()),
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:282:13
+    |
+280 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+281 |             Ok(_) => future::ok(()),
+282 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:288:13
+    |
+287 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+288 |             Ok(ref m) => future::ok((m.clone(), ModuleRuntimeState::default())),
+    |             ^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:289:13
+    |
+287 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+288 |             Ok(ref m) => future::ok((m.clone(), ModuleRuntimeState::default())),
+289 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:295:13
+    |
+294 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+295 |             Ok(_) => future::ok(()),
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:296:13
+    |
+294 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+295 |             Ok(_) => future::ok(()),
+296 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:302:13
+    |
+301 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+302 |             Ok(_) => future::ok(()),
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:303:13
+    |
+301 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+302 |             Ok(_) => future::ok(()),
+303 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:309:13
+    |
+308 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+309 |             Ok(_) => future::ok(()),
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:310:13
+    |
+308 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+309 |             Ok(_) => future::ok(()),
+310 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:316:13
+    |
+315 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+316 |             Ok(_) => future::ok(()),
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:317:13
+    |
+315 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+316 |             Ok(_) => future::ok(()),
+317 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:323:13
+    |
+322 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+323 |             Ok(_) => future::ok(SystemInfo::new(
+    |             ^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:327:13
+    |
+322 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+...
+327 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:333:13
+    |
+332 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+333 |             Ok(ref m) => future::ok(vec![m.clone()]),
+    |             ^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:334:13
+    |
+332 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+333 |             Ok(ref m) => future::ok(vec![m.clone()]),
+334 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:340:13
+    |
+339 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+340 |             Ok(ref m) => {
+    |             ^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:344:13
+    |
+339 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+...
+344 |             Err(ref e) => Box::new(stream::once(Err(e.clone()))),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:350:13
+    |
+349 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+350 |             Ok(ref _m) => future::ok(EmptyBody::new()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error[E0308]: mismatched types
+   --> edgelet-test-utils/src/module.rs:351:13
+    |
+349 |         match self.module {
+    |               ----------- this match expression has type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+350 |             Ok(ref _m) => future::ok(EmptyBody::new()),
+351 |             Err(ref e) => future::err(e.clone()),
+    |             ^^^^^^^^^^ expected enum `std::option::Option`, found enum `std::result::Result`
+    |
+    = note: expected type `std::option::Option<std::result::Result<module::TestModule<E, <S as edgelet_core::settings::RuntimeSettings>::Config>, E>>`
+               found type `std::result::Result<_, _>`
+
+error: aborting due to 22 previous errors
+
+Some errors occurred: E0061, E0308.
+For more information about an error, try `rustc --explain E0061`.
+error: Could not compile `edgelet-test-utils`.
+
+To learn more, run the command again with --verbose.

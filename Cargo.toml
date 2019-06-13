@@ -1,0 +1,10 @@
+[package]
+name = "rust-errors"
+version = "0.1.0"
+authors = ["Rajasekharan Vengalil <rajave@microsoft.com>"]
+edition = "2018"
+
+[dependencies]
+console = "0.7"
+regex = "1.1"
+structopt = "0.2"
